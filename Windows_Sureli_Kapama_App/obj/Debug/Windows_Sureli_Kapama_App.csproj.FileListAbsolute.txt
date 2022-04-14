@@ -1,0 +1,11 @@
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\bin\Debug\Windows_Sureli_Kapama_App.exe.config
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\bin\Debug\Windows_Sureli_Kapama_App.exe
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\bin\Debug\Windows_Sureli_Kapama_App.pdb
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.csproj.AssemblyReference.cache
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.csproj.SuggestedBindingRedirects.cache
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.MainForm.resources
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.Properties.Resources.resources
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.csproj.GenerateResource.cache
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.csproj.CoreCompileInputs.cache
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.exe
+C:\Users\mustafadizdar\source\repos\Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App\obj\Debug\Windows_Sureli_Kapama_App.pdb

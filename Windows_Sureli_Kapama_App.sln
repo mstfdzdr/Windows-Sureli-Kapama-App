@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows_Sureli_Kapama_App", "Windows_Sureli_Kapama_App\Windows_Sureli_Kapama_App.csproj", "{53291860-EDAC-4E6A-AC7E-529773C9742E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53291860-EDAC-4E6A-AC7E-529773C9742E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53291860-EDAC-4E6A-AC7E-529773C9742E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53291860-EDAC-4E6A-AC7E-529773C9742E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53291860-EDAC-4E6A-AC7E-529773C9742E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55F7A836-1609-4C1B-8B32-36F4DC87EFBB}
+	EndGlobalSection
+EndGlobal
