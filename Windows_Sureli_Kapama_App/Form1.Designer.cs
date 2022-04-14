@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.autoBtn = new System.Windows.Forms.Button();
             this.manuBtn = new System.Windows.Forms.Button();
             this.bilgiLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.aktifKapamaBilgiLbl = new System.Windows.Forms.Label();
+            this.aktifKapamaDurumuLbl = new System.Windows.Forms.Label();
             this.autoOkBtn = new System.Windows.Forms.Button();
             this.autoCancelBtn = new System.Windows.Forms.Button();
             this.manOkBtn = new System.Windows.Forms.Button();
@@ -41,6 +43,10 @@
             this.secimCbBox = new System.Windows.Forms.ComboBox();
             this.manTxtBox = new System.Windows.Forms.TextBox();
             this.dkStr = new System.Windows.Forms.Label();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.kucultBtn = new System.Windows.Forms.Button();
+            this.surecCancelBtn = new System.Windows.Forms.Button();
+            this.programiKapatBtn = new System.Windows.Forms.Button();
             this.gbox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,27 +100,27 @@
             this.bilgiLabel.TabIndex = 0;
             this.bilgiLabel.Text = "lütfen kapatma süresini nasıl gireceğinizi seçiniz";
             // 
-            // label2
+            // aktifKapamaBilgiLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(33)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(372, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "aktif kapatma işlemi:";
+            this.aktifKapamaBilgiLbl.AutoSize = true;
+            this.aktifKapamaBilgiLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aktifKapamaBilgiLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(33)))), ((int)(((byte)(72)))));
+            this.aktifKapamaBilgiLbl.Location = new System.Drawing.Point(387, 17);
+            this.aktifKapamaBilgiLbl.Name = "aktifKapamaBilgiLbl";
+            this.aktifKapamaBilgiLbl.Size = new System.Drawing.Size(123, 13);
+            this.aktifKapamaBilgiLbl.TabIndex = 1;
+            this.aktifKapamaBilgiLbl.Text = "aktif kapatma işlemi:";
             // 
-            // label3
+            // aktifKapamaDurumuLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(29)))), ((int)(((byte)(59)))));
-            this.label3.Location = new System.Drawing.Point(501, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "yok";
+            this.aktifKapamaDurumuLbl.AutoSize = true;
+            this.aktifKapamaDurumuLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aktifKapamaDurumuLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(29)))), ((int)(((byte)(59)))));
+            this.aktifKapamaDurumuLbl.Location = new System.Drawing.Point(516, 17);
+            this.aktifKapamaDurumuLbl.Name = "aktifKapamaDurumuLbl";
+            this.aktifKapamaDurumuLbl.Size = new System.Drawing.Size(27, 13);
+            this.aktifKapamaDurumuLbl.TabIndex = 3;
+            this.aktifKapamaDurumuLbl.Text = "yok";
             // 
             // autoOkBtn
             // 
@@ -128,6 +134,7 @@
             this.autoOkBtn.TabIndex = 4;
             this.autoOkBtn.Text = "tamamdır ;)";
             this.autoOkBtn.UseVisualStyleBackColor = false;
+            this.autoOkBtn.Click += new System.EventHandler(this.autoOkBtn_Click);
             // 
             // autoCancelBtn
             // 
@@ -155,6 +162,7 @@
             this.manOkBtn.TabIndex = 6;
             this.manOkBtn.Text = "tamamdır ;)";
             this.manOkBtn.UseVisualStyleBackColor = false;
+            this.manOkBtn.Click += new System.EventHandler(this.manOkBtn_Click);
             // 
             // manCancelBtn
             // 
@@ -204,12 +212,64 @@
             this.dkStr.TabIndex = 1;
             this.dkStr.Text = "dk";
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon.BalloonTipText = "Program burada çalışıyor..";
+            this.notifyIcon.BalloonTipTitle = "Bilgisayar Kapatıcı v.1";
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "Bilgisayar Kapatıcı @mstfdzdr";
+            this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            // 
+            // kucultBtn
+            // 
+            this.kucultBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(63)))), ((int)(((byte)(107)))));
+            this.kucultBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kucultBtn.ForeColor = System.Drawing.Color.White;
+            this.kucultBtn.Location = new System.Drawing.Point(12, 12);
+            this.kucultBtn.Name = "kucultBtn";
+            this.kucultBtn.Size = new System.Drawing.Size(75, 23);
+            this.kucultBtn.TabIndex = 8;
+            this.kucultBtn.Text = "gizle";
+            this.kucultBtn.UseVisualStyleBackColor = false;
+            this.kucultBtn.Click += new System.EventHandler(this.kucultBtn_Click);
+            // 
+            // surecCancelBtn
+            // 
+            this.surecCancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(6)))), ((int)(((byte)(0)))));
+            this.surecCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.surecCancelBtn.ForeColor = System.Drawing.Color.White;
+            this.surecCancelBtn.Location = new System.Drawing.Point(91, 12);
+            this.surecCancelBtn.Name = "surecCancelBtn";
+            this.surecCancelBtn.Size = new System.Drawing.Size(109, 23);
+            this.surecCancelBtn.TabIndex = 9;
+            this.surecCancelBtn.Text = "kapatmayı durdur!";
+            this.surecCancelBtn.UseVisualStyleBackColor = false;
+            this.surecCancelBtn.Visible = false;
+            this.surecCancelBtn.Click += new System.EventHandler(this.surecCancelBtn_Click);
+            // 
+            // programiKapatBtn
+            // 
+            this.programiKapatBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(95)))), ((int)(((byte)(0)))));
+            this.programiKapatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.programiKapatBtn.ForeColor = System.Drawing.Color.White;
+            this.programiKapatBtn.Location = new System.Drawing.Point(91, 12);
+            this.programiKapatBtn.Name = "programiKapatBtn";
+            this.programiKapatBtn.Size = new System.Drawing.Size(109, 23);
+            this.programiKapatBtn.TabIndex = 10;
+            this.programiKapatBtn.Text = "programdan çık";
+            this.programiKapatBtn.UseVisualStyleBackColor = false;
+            this.programiKapatBtn.Click += new System.EventHandler(this.programiKapatBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(563, 340);
+            this.Controls.Add(this.programiKapatBtn);
+            this.Controls.Add(this.surecCancelBtn);
+            this.Controls.Add(this.kucultBtn);
             this.Controls.Add(this.dkStr);
             this.Controls.Add(this.manTxtBox);
             this.Controls.Add(this.secimCbBox);
@@ -217,13 +277,14 @@
             this.Controls.Add(this.manOkBtn);
             this.Controls.Add(this.autoCancelBtn);
             this.Controls.Add(this.autoOkBtn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.aktifKapamaDurumuLbl);
+            this.Controls.Add(this.aktifKapamaBilgiLbl);
             this.Controls.Add(this.manuBtn);
             this.Controls.Add(this.autoBtn);
             this.Controls.Add(this.gbox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -243,8 +304,8 @@
         private System.Windows.Forms.Button autoBtn;
         private System.Windows.Forms.Button manuBtn;
         private System.Windows.Forms.Label bilgiLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label aktifKapamaBilgiLbl;
+        private System.Windows.Forms.Label aktifKapamaDurumuLbl;
         private System.Windows.Forms.Button autoOkBtn;
         private System.Windows.Forms.Button autoCancelBtn;
         private System.Windows.Forms.Button manOkBtn;
@@ -252,6 +313,10 @@
         private System.Windows.Forms.ComboBox secimCbBox;
         private System.Windows.Forms.TextBox manTxtBox;
         private System.Windows.Forms.Label dkStr;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button kucultBtn;
+        private System.Windows.Forms.Button surecCancelBtn;
+        private System.Windows.Forms.Button programiKapatBtn;
     }
 }
 

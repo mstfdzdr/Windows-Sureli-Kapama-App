@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Windows_Sureli_Kapama_App")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Windows Süreli Kapama App @mstfdzdr")]
+[assembly: AssemblyDescription("Eğlencesine..")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Windows_Sureli_Kapama_App")]
+[assembly: AssemblyProduct("Windows Süreli Kapama App @mstfdzdr")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
